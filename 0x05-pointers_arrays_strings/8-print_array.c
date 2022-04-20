@@ -1,21 +1,28 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
-* puts_half - prints the second half of the string
-* @str: the string reference
-* Return: 0
-*/
+ *print_array - prints n elements of an array of integers
+ *@a: A pointer to an int that will be updated/ changed
+ *@n: return value n
+ *Return: void which ,means our answer is correct
+ */
 
-void puts_half(char *str)
+void print_array(int *a, int n)
 {
 	int i;
 
-	for (i = 0; str[i] != '\0'; i++)
-		;
-	i++;
-	for (i /= 2; str[i] != '\0'; i++)
+	i = 0;
+	while (i < n)
 	{
-		_putchar(str[i]);
+	printf("%d", a[i]);
+
+	if (i < n - 1)
+	{
+		printf(", ");
 	}
-	_putchar('\n');
+
+	i++;
+	}
+
+	printf("\n");
 }
